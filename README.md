@@ -18,7 +18,8 @@ The goal of this project was to create a clean, functional UI mimicking a physic
 ## 3. How It Works (Logic Flowchart)
 The Calculator operates on a cyclical input-process-output model managed entirely by JavaScript. 
 
-![Logic Flowchart](watermarked_img_10602067934641970635.png)
+![Logic Flowchart]<img width="922" height="375" alt="flowchart" src="https://github.com/user-attachments/assets/28281eb1-d30b-49b5-85e8-43e66b63e045" />
+
 
 ### Logic Breakdown:
 * **User Input:** The cycle begins when the user interacts with the UI via `onclick` event listeners.
@@ -38,12 +39,13 @@ The code initializes with the display set to '0'. The CSS defines a dark theme w
 ### Phase 2: Successful Calculation
 In this phase, mathematical strings (e.g., "7*10+5") are evaluated correctly to produce results like "75".
 
-![Successful Calculation]<img width="225" height="332" alt="error png" src="https://github.com/user-attachments/assets/d87aaae8-0b87-44a9-a203-b7e4f4319362" />
+![Successful Calculation]<img width="225" height="332" alt="success png" src="https://github.com/user-attachments/assets/4e220fe4-3e53-4615-9c27-8b0823349ca0" />
 
 ### Phase 3: Error Handling
 The application includes a `try...catch` block. If an invalid mathematical string is entered, the screen displays "Error" before resetting to "0" after 1.5 seconds via `setTimeout`.
 
-![Error State]<img width="225" height="332" alt="success png" src="https://github.com/user-attachments/assets/4e220fe4-3e53-4615-9c27-8b0823349ca0" />
+![Error State]<img width="225" height="332" alt="error png" src="https://github.com/user-attachments/assets/d87aaae8-0b87-44a9-a203-b7e4f4319362" />
+
 
 ---
 
