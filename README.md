@@ -38,7 +38,9 @@ The code initializes with the display set to '0'. The CSS defines a dark theme w
 ### Phase 2: Successful Calculation
 In this phase, mathematical strings (e.g., "7*10+5") are evaluated correctly to produce results like "75".
 
-![Successful Calculation](success.png)
+![Successful Calculation]<img width="511" height="721" alt="initial png" src="https://github.com/user-attachments/assets/67bc3d73-0d60-42b6-b294-ae58b7247006" />
+<img width="512" height="730" alt="error png" src="https://github.com/user-attachments/assets/d87aaae8-0b87-44a9-a203-b7e4f4319362" />
+<img width="525" height="732" alt="success png" src="https://github.com/user-attachments/assets/4e220fe4-3e53-4615-9c27-8b0823349ca0" />
 
 ### Phase 3: Error Handling
 The application includes a `try...catch` block. If an invalid mathematical string is entered, the screen displays "Error" before resetting to "0" after 1.5 seconds via `setTimeout`.
