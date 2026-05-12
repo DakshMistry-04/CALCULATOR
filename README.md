@@ -33,7 +33,7 @@ The Calculator operates on a cyclical input-process-output model managed entirel
 ### Phase 1: Initial State
 The code initializes with the display set to '0'. The CSS defines a dark theme with vibrant orange operators and a blue equals key.
 
-![Initial State](initial.png)
+![Initial State](initial.png.png)
 
 ### Phase 2: Successful Calculation
 In this phase, mathematical strings (e.g., "7*10+5") are evaluated correctly to produce results like "75".
