@@ -1,0 +1,315 @@
+**`index.html`**
+
+```html
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gemma Calculator</title>
+
+<style>
+
+body {
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+min-height: 100vh;
+
+background-color: #f4f4f9;
+
+font-family: Arial, sans-serif;
+
+}
+
+.calculator {
+
+background-color: #333;
+
+padding: 20px;
+
+border-radius: 10px;
+
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+width: 300px;
+
+}
+
+#display {
+
+background-color: #222;
+
+color: white;
+
+font-size: 2.5em;
+
+text-align: right;
+
+padding: 15px;
+
+margin-bottom: 15px;
+
+border-radius: 5px;
+
+height: 50px;
+
+overflow-x: auto;
+
+}
+
+.buttons {
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 10px;
+
+}
+
+button {
+
+padding: 20px;
+
+font-size: 1.2em;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+background-color: #555;
+
+color: white;
+
+transition: background-color 0.2s;
+
+}
+
+button:hover {
+
+background-color: #777;
+
+}
+
+.operator {
+
+background-color: #ff9500;
+
+}
+
+.operator:hover {
+
+background-color: #e08400;
+
+}
+
+.equals {
+
+background-color: #007bff;
+
+grid-column: span 2;
+
+}
+
+.equals:hover {
+
+background-color: #0056b3;
+
+}
+
+.clear {
+
+background-color: #dc3545;
+
+}
+
+.clear:hover {
+
+background-color: #c82333;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="calculator">
+
+<div id="display">0</div>
+
+<div class="buttons">
+
+<button class="clear" onclick="clearDisplay()">C</button>
+
+<button class="operator" onclick="appendToDisplay('/')">/</button>
+
+<button class="operator" onclick="appendToDisplay('*')">*</button>
+
+<button class="operator" onclick="deleteLast()">DEL</button>
+
+
+<button onclick="appendToDisplay('7')">7</button>
+
+<button onclick="appendToDisplay('8')">8</button>
+
+<button onclick="appendToDisplay('9')">9</button>
+
+<button class="operator" onclick="appendToDisplay('-')">-</button>
+
+
+<button onclick="appendToDisplay('4')">4</button>
+
+<button onclick="appendToDisplay('5')">5</button>
+
+<button onclick="appendToDisplay('6')">6</button>
+
+<button class="operator" onclick="appendToDisplay('+')">+</button>
+
+
+<button onclick="appendToDisplay('1')">1</button>
+
+<button onclick="appendToDisplay('2')">2</button>
+
+<button onclick="appendToDisplay('3')">3</button>
+
+<button class="equals" onclick="calculate()">=</button>
+
+
+<button onclick="appendToDisplay('0')">0</button>
+
+<button onclick="appendToDisplay('.')">.</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+const display = document.getElementById('display');
+
+let currentInput = '0';
+
+
+
+function updateDisplay() {
+
+display.innerText = currentInput;
+
+}
+
+
+
+function clearDisplay() {
+
+currentInput = '0';
+
+updateDisplay();
+
+}
+
+
+
+function deleteLast() {
+
+if (currentInput.length > 1) {
+
+currentInput = currentInput.slice(0, -1);
+
+} else {
+
+currentInput = '0';
+
+}
+
+updateDisplay();
+
+}
+
+
+
+function appendToDisplay(input) {
+
+if (currentInput === '0' && input !== '.') {
+
+currentInput = input;
+
+} else {
+
+currentInput += input;
+
+}
+
+updateDisplay();
+
+}
+
+
+
+function calculate() {
+
+try {
+
+// Using eval() is generally discouraged in production for security,
+
+// but it is the simplest way to handle math expressions in a client-side calculator.
+
+const result = eval(currentInput);
+
+currentInput = String(result);
+
+updateDisplay();
+
+} catch (e) {
+
+currentInput = 'Error';
+
+updateDisplay();
+
+setTimeout(() => {
+
+currentInput = '0';
+
+updateDisplay();
+
+}, 1500);
+
+}
+
+}
+
+
+
+// Initialize display
+
+updateDisplay();
+
+</script>
+
+</body>
+
+</html>
+
+```
+
+
+
+***
