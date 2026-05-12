@@ -33,17 +33,17 @@ The Calculator operates on a cyclical input-process-output model managed entirel
 ### Phase 1: Initial State
 The code initializes with the display set to '0'. The CSS defines a dark theme with vibrant orange operators and a blue equals key.
 
-![Initial State](watermarked_img_15917403590011167473.png)
+![Initial State](initial.png)
 
 ### Phase 2: Successful Calculation
 In this phase, mathematical strings (e.g., "7*10+5") are evaluated correctly to produce results like "75".
 
-![Successful Calculation](watermarked_img_7113975823748339765.png)
+![Successful Calculation](success.png)
 
 ### Phase 3: Error Handling
 The application includes a `try...catch` block. If an invalid mathematical string is entered, the screen displays "Error" before resetting to "0" after 1.5 seconds via `setTimeout`.
 
-![Error State](watermarked_img_5048464735089163867.png)
+![Error State](error.png)
 
 ---
 
