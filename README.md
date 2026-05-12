@@ -1,2 +1,63 @@
 # CALCULATOR
 The Calculator is a modular, client-side web application designed to provide a seamless arithmetic experience directly within a browser. It serves as a practical demonstration of integrating HTML5, CSS3, and Vanilla JavaScript to create a responsive and interactive user interface.
+
+# Calculator
+
+## 1. Table of Contents
+* [About the Project](#2-about-the-project)
+* [How It Works (Logic Flowchart)](#3-how-it-works-logic-flowchart)
+* [Result and Analysis](#4-result-and-analysis)
+* [Technology Used](#5-technology-used)
+
+---
+
+## 2. About the Project
+The **Calculator** is a lightweight, client-side web application designed to perform basic arithmetic operations directly within a modern web browser. It features a responsive grid interface, structured CSS for visual clarity, and simple JavaScript for state management and mathematical evaluation. 
+
+The goal of this project was to create a clean, functional UI mimicking a physical calculator, demonstrating efficient DOM manipulation and basic mathematical input handling without relying on complex backend infrastructure.
+
+---
+
+## 3. How It Works (Logic Flowchart)
+The Calculator operates on a cyclical input-process-output model managed entirely by JavaScript. 
+
+![Logic Flowchart](watermarked_img_10602067934641970635.png)
+
+### Logic Breakdown:
+* **User Input:** The cycle begins when the user interacts with the UI via `onclick` event listeners.
+* **State Management:** The application maintains a single point of truth for the input using a `currentInput` string variable.
+* **Process:** When the `=` button is pressed, the `calculate()` function triggers using the `eval()` method to process the string as JavaScript math.
+* **DOM Manipulation:** The `updateDisplay()` function locates the screen element and updates its `innerText` to match the new state.
+
+---
+
+## 4. Result and Analysis
+
+### Phase 1: Initial State
+The code initializes with the display set to '0'. The CSS defines a dark theme with vibrant orange operators and a blue equals key.
+
+![Initial State](watermarked_img_15917403590011167473.png)
+
+### Phase 2: Successful Calculation
+In this phase, mathematical strings (e.g., "7*10+5") are evaluated correctly to produce results like "75".
+
+![Successful Calculation](watermarked_img_7113975823748339765.png)
+
+### Phase 3: Error Handling
+The application includes a `try...catch` block. If an invalid mathematical string is entered, the screen displays "Error" before resetting to "0" after 1.5 seconds via `setTimeout`.
+
+![Error State](watermarked_img_5048464735089163867.png)
+
+---
+
+## 5. Technology Used
+
+| Technology | Role |
+| :--- | :--- |
+| **HTML5** | Structure and Semantic Markup |
+| **CSS3** | Responsive Grid Layout and Styling |
+| **JavaScript (ES6)** | State Management and Evaluation Logic |
+| **Gemma** | Efficiency logic consultation |
+| **Gemini** | Layout analysis and CSS optimization |
+| **Claude** | Error handling refinement |
+| **Grok** | Implementation validation |
